@@ -13,3 +13,6 @@
 ## API Preview
 
 ![API Image](https://github.com/Menelis/BookSubscription/blob/master/Common/Images/API.gif)
+
+## Client App Preview
+![Client Image](https://github.com/Menelis/BookSubscription/blob/master/Common/Images/client%20app.gif)
