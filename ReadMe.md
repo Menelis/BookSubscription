@@ -9,3 +9,7 @@
 - Core.Tests - Unit Tests for Core class library.
 - Infastructure - The data layer class library where we define database for our application. In this application we SQL Server as database.
 - book-subscription-client - Angular 11 application.
+
+## API Preview
+
+![API Image](https://github.com/Menelis/BookSubscription/blob/master/Common/Images/API.gif)
