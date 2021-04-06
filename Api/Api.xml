@@ -1,0 +1,547 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Api</name>
+    </assembly>
+    <members>
+        <member name="T:Api.Controllers.AccountController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Controllers.AccountController.#ctor(Core.Interfaces.UseCases.UserUseCases.IRegisterUserUseCase,Api.Presenters.UserPresenters.RegisterUserPresenter,Core.Interfaces.UseCases.UserUseCases.ILoginUseCase,Api.Presenters.UserPresenters.LoginPresenter)">
+            <summary>
+            
+            </summary>
+            <param name="registerUserUseCase"></param>
+            <param name="registerUserPresenter"></param>
+            <param name="loginUseCase"></param>
+            <param name="loginPresenter"></param>
+        </member>
+        <member name="M:Api.Controllers.AccountController.Post(Api.Models.Requests.RegisterUserRequest)">
+            <summary>
+            Register new user
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Api.Controllers.AccountController.Login(Api.Models.Requests.LoginRequest)">
+            <summary>
+            Authenticate user
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Api.Controllers.BookController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Controllers.BookController.#ctor(Core.Interfaces.UseCases.BookUseCases.ICreateBookUseCase,Api.Presenters.BookPresenters.CreateBookPresenter,Core.Interfaces.UseCases.BookUseCases.IUpdateBookUseCase,Api.Presenters.BookPresenters.UpdateBookPresenter,Core.Interfaces.UseCases.BookUseCases.IGetAllBooksUseCase,Api.Presenters.BookPresenters.GetAllBooksPresenter,Core.Interfaces.UseCases.BookUseCases.IGetBookByIdUseCase,Api.Presenters.BookPresenters.GetBookByIdPresenter,Core.Interfaces.UseCases.BookUseCases.IDeleteBookUseCase,Api.Presenters.BookPresenters.DeleteBookPresenter,Core.Interfaces.UseCases.BookUseCases.IGetBookSubscriptionsUseCase,Api.Presenters.BookPresenters.GetBookSubscriptionPresenter)">
+            <summary>
+            
+            </summary>
+            <param name="createBookUseCase"></param>
+            <param name="createBookPresenter"></param>
+            <param name="updateBookUseCase"></param>
+            <param name="updateBookPresenter"></param>
+            <param name="getAllBooksUseCase"></param>
+            <param name="getAllBooksPresenter"></param>
+            <param name="getBookByIdUseCase"></param>
+            <param name="getBookByIdPresenter"></param>
+            <param name="deleteBookUseCase"></param>
+            <param name="deleteBookPresenter"></param>
+            <param name="getBookSubscriptionsUseCase"></param>
+            <param name="getBookSubscriptionPresenter"></param>
+        </member>
+        <member name="M:Api.Controllers.BookController.Post(Api.Models.Requests.BookRequest)">
+            <summary>
+            Create a new Book
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Api.Controllers.BookController.Put(System.Guid,Api.Models.Requests.BookRequest)">
+            <summary>
+            Modifies the existing book
+            </summary>
+            <param name="id"></param>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Api.Controllers.BookController.Get">
+            <summary>
+            Returns a list of books
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Api.Controllers.BookController.Get(System.Guid)">
+            <summary>
+            Returns a book that matches the provided book Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Api.Controllers.BookController.Delete(System.Guid)">
+            <summary>
+            Removes the existing Book that matches the provided id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Api.Controllers.BookController.GetSubscriptions(System.String)">
+            <summary>
+            Get User Subscriptions by user id
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Api.Controllers.BookSubscriptionController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Controllers.BookSubscriptionController.#ctor(Core.Interfaces.UseCases.BookUseCases.ICreateBookSubscriptionUseCase,Api.Presenters.BookPresenters.CreateBookSubscriptionPresenter,Core.Interfaces.UseCases.BookUseCases.IRemoveBookSubscriptionUseCase,Api.Presenters.BookPresenters.RemoveBookSubscriptionPresenter)">
+            <summary>
+            
+            </summary>
+            <param name="createBookSubscriptionUseCase"></param>
+            <param name="createBookSubscriptionPresenter"></param>
+            <param name="removeBookSubscriptionUseCase"></param>
+            <param name="removeBookSubscriptionPresenter"></param>
+        </member>
+        <member name="M:Api.Controllers.BookSubscriptionController.Post(Api.Models.Requests.BookSubscriptionRequest)">
+            <summary>
+            Subscribe to avaible books
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Api.Controllers.BookSubscriptionController.Delete(Api.Models.Requests.BookSubscriptionRequest)">
+            <summary>
+            Unsubscripe to subscribed online books
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Api.Controllers.WeatherForecastController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Controllers.WeatherForecastController.#ctor(Microsoft.Extensions.Logging.ILogger{Api.Controllers.WeatherForecastController})">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+        </member>
+        <member name="M:Api.Controllers.WeatherForecastController.Get">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Api.Extensions.ServiceExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Extensions.ServiceExtensions.ConfigureJwtAuthentication(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:Api.Extensions.ServiceExtensions.ConfigureCors(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:Api.Extensions.ServiceExtensions.ConfigureSwagger(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="T:Api.Models.Requests.BookRequest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Models.Requests.BookRequest.Id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Models.Requests.BookRequest.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Models.Requests.BookRequest.Text">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Models.Requests.BookRequest.Price">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Api.Models.Requests.BookSubscriptionRequest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Models.Requests.BookSubscriptionRequest.BookId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Models.Requests.BookSubscriptionRequest.UserId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Api.Models.Requests.LoginRequest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Models.Requests.LoginRequest.UserName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Models.Requests.LoginRequest.Password">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Api.Models.Requests.RegisterUserRequest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Models.Requests.RegisterUserRequest.FirstName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Models.Requests.RegisterUserRequest.LastName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Models.Requests.RegisterUserRequest.Email">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Models.Requests.RegisterUserRequest.Password">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Api.Presenters.BookPresenters.CreateBookPresenter">
+            <summary>
+            Presenter for creating a book response
+            </summary>
+        </member>
+        <member name="P:Api.Presenters.BookPresenters.CreateBookPresenter.ContentResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Presenters.BookPresenters.CreateBookPresenter.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Presenters.BookPresenters.CreateBookPresenter.Handle(Core.Dto.UseCaseResponses.BookReponses.CreateBookResponse)">
+            <summary>
+            
+            </summary>
+            <param name="response"></param>
+        </member>
+        <member name="T:Api.Presenters.BookPresenters.CreateBookSubscriptionPresenter">
+            <summary>
+            Presenter for Subscribing to the online book
+            </summary>
+        </member>
+        <member name="P:Api.Presenters.BookPresenters.CreateBookSubscriptionPresenter.ContentResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Presenters.BookPresenters.CreateBookSubscriptionPresenter.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Presenters.BookPresenters.CreateBookSubscriptionPresenter.Handle(Core.Dto.UseCaseResponses.BookReponses.CreateBookSubscriptionReponse)">
+            <summary>
+            
+            </summary>
+            <param name="response"></param>
+        </member>
+        <member name="T:Api.Presenters.BookPresenters.DeleteBookPresenter">
+            <summary>
+            Presenter for Removing a book use case response
+            </summary>
+        </member>
+        <member name="P:Api.Presenters.BookPresenters.DeleteBookPresenter.ContentResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Presenters.BookPresenters.DeleteBookPresenter.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Presenters.BookPresenters.DeleteBookPresenter.Handle(Core.Dto.UseCaseResponses.BookReponses.DeleteBookResponse)">
+            <summary>
+            
+            </summary>
+            <param name="response"></param>
+        </member>
+        <member name="T:Api.Presenters.BookPresenters.GetAllBooksPresenter">
+            <summary>
+            Presenter for GetAll books use case response
+            </summary>
+        </member>
+        <member name="P:Api.Presenters.BookPresenters.GetAllBooksPresenter.ContentResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Presenters.BookPresenters.GetAllBooksPresenter.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Presenters.BookPresenters.GetAllBooksPresenter.Handle(Core.Dto.UseCaseResponses.BookReponses.GetAllBooksResponse)">
+            <summary>
+            
+            </summary>
+            <param name="response"></param>
+        </member>
+        <member name="T:Api.Presenters.BookPresenters.GetBookByIdPresenter">
+            <summary>
+            Presenter for Returning book by id use case
+            </summary>
+        </member>
+        <member name="P:Api.Presenters.BookPresenters.GetBookByIdPresenter.ContentResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Presenters.BookPresenters.GetBookByIdPresenter.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Presenters.BookPresenters.GetBookByIdPresenter.Handle(Core.Dto.UseCaseResponses.BookReponses.GetBookByIdResponse)">
+            <summary>
+            
+            </summary>
+            <param name="response"></param>
+        </member>
+        <member name="T:Api.Presenters.BookPresenters.GetBookSubscriptionPresenter">
+            <summary>
+            Presenter for Book Subscriptions by user or no user
+            </summary>
+        </member>
+        <member name="P:Api.Presenters.BookPresenters.GetBookSubscriptionPresenter.ContentResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Presenters.BookPresenters.GetBookSubscriptionPresenter.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Presenters.BookPresenters.GetBookSubscriptionPresenter.Handle(Core.Dto.UseCaseResponses.BookReponses.GetBookSubscriptionsResponse)">
+            <summary>
+            
+            </summary>
+            <param name="response"></param>
+        </member>
+        <member name="T:Api.Presenters.BookPresenters.RemoveBookSubscriptionPresenter">
+            <summary>
+            Presenter for removing book subscription
+            </summary>
+        </member>
+        <member name="P:Api.Presenters.BookPresenters.RemoveBookSubscriptionPresenter.ContentResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Presenters.BookPresenters.RemoveBookSubscriptionPresenter.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Presenters.BookPresenters.RemoveBookSubscriptionPresenter.Handle(Core.Dto.UseCaseResponses.BookReponses.RemoveBookSubscriptionResponse)">
+            <summary>
+            
+            </summary>
+            <param name="response"></param>
+        </member>
+        <member name="T:Api.Presenters.BookPresenters.UpdateBookPresenter">
+            <summary>
+            Presenter for updating a book response
+            </summary>
+        </member>
+        <member name="P:Api.Presenters.BookPresenters.UpdateBookPresenter.ContentResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Presenters.BookPresenters.UpdateBookPresenter.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Presenters.BookPresenters.UpdateBookPresenter.Handle(Core.Dto.UseCaseResponses.BookReponses.UpdateBookReponse)">
+            <summary>
+            
+            </summary>
+            <param name="response"></param>
+        </member>
+        <member name="T:Api.Presenters.JsonContentResult">
+            <summary>
+            Custom Json Serialization class
+            </summary>
+        </member>
+        <member name="M:Api.Presenters.JsonContentResult.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Api.Presenters.UserPresenters.LoginPresenter">
+            <summary>
+            User login presenter - This class will presend response from login use case to client(API)
+            </summary>
+        </member>
+        <member name="P:Api.Presenters.UserPresenters.LoginPresenter.ContentResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Presenters.UserPresenters.LoginPresenter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Api.Presenters.UserPresenters.LoginPresenter.Handle(Core.Dto.UseCaseResponses.UserResponses.LoginResponse)">
+            <summary>
+            
+            </summary>
+            <param name="response"></param>
+        </member>
+        <member name="T:Api.Presenters.UserPresenters.RegisterUserPresenter">
+            <summary>
+            Register user presenter to present register user response to UI(Api)
+            </summary>
+        </member>
+        <member name="P:Api.Presenters.UserPresenters.RegisterUserPresenter.ContentResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Presenters.UserPresenters.RegisterUserPresenter.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Presenters.UserPresenters.RegisterUserPresenter.Handle(Core.Dto.UseCaseResponses.UserResponses.RegisterUserResponse)">
+            <summary>
+            
+            </summary>
+            <param name="response"></param>
+        </member>
+        <member name="T:Api.Program">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Program.Main(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Api.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Api.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:Api.Startup.Configuration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:Api.Startup.ConfigureContainer(Autofac.ContainerBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="container"></param>
+        </member>
+        <member name="M:Api.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+        <member name="T:Api.WeatherForecast">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.WeatherForecast.Date">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.WeatherForecast.TemperatureC">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.WeatherForecast.TemperatureF">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.WeatherForecast.Summary">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>
